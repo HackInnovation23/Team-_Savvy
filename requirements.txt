@@ -6,4 +6,3 @@ bz2file
 scikit-learn 
 numpy
 pandas
-smtplib
