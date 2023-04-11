@@ -2,7 +2,6 @@ streamlit
 streamlit-authenticator
 streamlit-option-menu
 matplotlib
-pickle 
 bz2file
 scikit-learn 
 numpy
