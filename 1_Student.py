@@ -152,11 +152,11 @@ def send_mail_to_user(email,val):
 
     if val == 1:
         context = pass_fun()
-        sub = "Mail from Team Savvy... Congratulations on your Outstanding Performance in Internal Exams"
+        sub = "Congratulations! Our Model has predicted that you will pass in all subjects!"
 
     else:
         context = fail_fun()
-        sub = "Mail from Team Savvy... Encouragement and Online Learning Resources"
+        sub = "Study Resources"
 
     
 
@@ -181,7 +181,7 @@ pipe = pkl.load(data)
 
 
 
-option = ['Semester Result Prediction','Placement Prediction']
+option = ['Single Subject','Placement Prediction']
 
 
 with st.sidebar:
@@ -192,7 +192,7 @@ with st.sidebar:
 
 
 if selected == option[0]:
-    st.title("Semester Result Prediction")
+    st.title("Single Subject :")
     c,c0 = st.columns([2,2])
 
     c1,c2,c3 = st.columns([3,1,3])
@@ -247,28 +247,28 @@ if selected == option[1]:
 
         st.write("###")
         option = st.selectbox(
-         'Enter your stream : ',
+         'Which Stream you are studying?..',
         ('--Select--','Electronics And Communication', 'Computer Science', 'Information Technology','Mechanical','Electrical','Civil'))
 
-        cgpa = st.number_input("Enter your CGPA : ",min_value=0,max_value=10)
+        cgpa = st.number_input("What's your CGPA : ",min_value=0,max_value=10)
     with c6:
         stream = {'Electronics And Communication':0, 'Computer Science':1,
             'Information Technology':2, 'Mechanical':3, 'Electrical':4, 'Civil':5}
         
         gender = st.selectbox(
-            "Select your gender : ",
+            "What\'s your gender",
             ('Male', 'Female'))
         
         st.write("###")
-        intern_c = st.number_input("Internship attended : ",min_value=0,max_value=8)
+        intern_c = st.number_input("Internship attend : ",min_value=0,max_value=8)
 
         Hostelers = st.selectbox(
-            "Have you attended any placement training before? ",
+            "Are you Hosteler's ? ",
             ("Yes",'No')
         )
         
     hob = st.selectbox(
-        'History Of Backlogs ? ',
+        'Do you have Any History Of Backlogs ? ',
         ('Yes','No')
     )
 
