@@ -258,7 +258,7 @@ if selected == option[1]:
             ('Male', 'Female'))
         
         st.write("###")
-        intern_c = st.number_input("Internship attended : ",min_value=0,max_value=8)
+        intern_c = st.number_input("Enter no. of Internship's attended : ",min_value=0,max_value=8)
 
         Hostelers = st.selectbox(
             "Have you attended any placement related training before ?",
