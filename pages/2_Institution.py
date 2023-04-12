@@ -155,16 +155,17 @@ if authentication_status == True:
     if st.button(" Submit "):
         my_bar = st.progress(0, text="Prediction is going on...")
 
-        for percent_complete in range(100):
-            time.sleep(0.1)
-            my_bar.progress(percent_complete + 1, text="Prediction is going on...")
-        time.sleep(0.5)
         
-        my_bar.empty()
         st.subheader("Output")
         try:
             df = pd.read_csv(f)
             y_pred = pipe.predict(df)
+            for percent_complete in range(100):
+                time.sleep(0.1)
+                my_bar.progress(percent_complete + 1, text="Prediction is going on...")
+            time.sleep(0.5)
+
+            my_bar.empty()
             df['predicted_value'] = y_pred
             df['predicted_value']=df['predicted_value'].map({1:"Pass",0:"Fail"})
             st.table(df)
