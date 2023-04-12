@@ -142,7 +142,7 @@ if authentication_status == True:
 
 
     f = st.file_uploader(label="Upload students data :",type="CSV",accept_multiple_files=False)
-    st.info("Note : Data format...")
+    st.info("Note : The data should be in the following format...⤵️",icon = "ℹ️")
     df_demo = pd.DataFrame(
         {
         'Hours_Study':[2, 2, 6, 1, 3],
