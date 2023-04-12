@@ -181,4 +181,5 @@ if authentication_status == True:
                 mime='text/csv',
             )
         except:
+            my_bar.empty()
             st.error("The given doesn't follow the format.")
