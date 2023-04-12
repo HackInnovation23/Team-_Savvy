@@ -181,7 +181,7 @@ pipe = pkl.load(data)
 
 
 
-option = ['Semester Result Precdition','Placement Prediction']
+option = ['Semester Result Prediction','Placement Prediction']
 
 
 with st.sidebar:
@@ -192,7 +192,7 @@ with st.sidebar:
 
 
 if selected == option[0]:
-    st.title("Semester Result Precdition:")
+    st.title("Semester Result Prediction:")
     c,c0 = st.columns([2,2])
 
     c1,c2,c3 = st.columns([3,1,3])
