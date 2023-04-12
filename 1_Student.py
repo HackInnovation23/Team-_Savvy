@@ -318,3 +318,4 @@ if selected == option[1]:
             send_mail_to_user(email,2)
         else:
             st.error("You may not get placed... Try to improve yourself")
+            send_mail_to_user(email,3)
