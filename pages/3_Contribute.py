@@ -76,14 +76,6 @@ def contribution_page():
             if submit_button:
                 data = {"Name": [name], "Email": [email], "IAT": [int((iat_1+iat_2)/2)], "Hours_studied" : hos,"Hours_entertained" : hoe,"Attendence": attendence}
                 df = pd.DataFrame(data)
-                
-                try:
-                    existing_df = pd.read_excel("contributions.xlsx")
-                    df = pd.concat([existing_df, df], ignore_index=True)
-                    df.to_excel("contributions.xlsx", index=False)
-                except FileNotFoundError:
-                    df.to_excel("contributions.xlsx", index=False)
-
                 st.success("Thank you for your contribution!")
                 st.table(df)
         else:
