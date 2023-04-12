@@ -3,8 +3,7 @@ import pandas as pd
 
 
 def contribution_page():
-    st.header("Contribute to Our Project")
-    st.write("Thank you for your interest in contributing to our project! We appreciate your help.")
+    st.header("Contribute data to our Project")
     
     # Add some CSS to style the form
     st.markdown(
@@ -61,11 +60,11 @@ def contribution_page():
         with c1:
             iat_1 = st.number_input("Enter your IAT-1 marks :",min_value=0,max_value=100)
 
-            hos = st.number_input("Hour's spend for studying : ",min_value=0,max_value=8)
+            hos = st.number_input("Hours spent for studying : ",min_value=0,max_value=8)
         with c3:
             iat_2 = st.number_input("Enter your IAT-2 marks :",min_value=0,max_value=100)
 
-            hoe = st.number_input("Hour's spend for entertainment : ",min_value=0,max_value=8)
+            hoe = st.number_input("Hours spent for entertainment : ",min_value=0,max_value=8)
 
         attendence = st.slider("Your Attendence Precentage : ",min_value=0,max_value=100)
             
