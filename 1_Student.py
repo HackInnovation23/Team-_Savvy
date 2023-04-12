@@ -242,7 +242,7 @@ if selected == option[1]:
     
     st.write("###")
     
-    st.text_input("Enter your email-id :")
+    email=st.text_input("Enter your email-id :")
 
     c4,c5,c6 = st.columns([3,1,3])
 
