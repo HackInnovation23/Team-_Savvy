@@ -245,28 +245,28 @@ if selected == option[1]:
 
         st.write("###")
         option = st.selectbox(
-         'Which Stream you are studying?..',
+         'Enter your stream : ',
         ('--Select--','Electronics And Communication', 'Computer Science', 'Information Technology','Mechanical','Electrical','Civil'))
 
-        cgpa = st.number_input("What's your CGPA : ",min_value=0,max_value=10)
+        cgpa = st.number_input("Enter your CGPA: ",min_value=0,max_value=10)
     with c6:
         stream = {'Electronics And Communication':0, 'Computer Science':1,
             'Information Technology':2, 'Mechanical':3, 'Electrical':4, 'Civil':5}
         
         gender = st.selectbox(
-            "What\'s your gender",
+            "Select your gender",
             ('Male', 'Female'))
         
         st.write("###")
-        intern_c = st.number_input("Internship attend : ",min_value=0,max_value=8)
+        intern_c = st.number_input("Internship attended : ",min_value=0,max_value=8)
 
         Hostelers = st.selectbox(
-            "Are you Hosteler's ? ",
+            "Have you attended any placement related training before ?",
             ("Yes",'No')
         )
         
     hob = st.selectbox(
-        'Do you have Any History Of Backlogs ? ',
+        'History Of Backlogs ? ',
         ('Yes','No')
     )
 
