@@ -182,4 +182,4 @@ if authentication_status == True:
             )
         except:
             my_bar.empty()
-            st.error("The given doesn't follow the format.")
+            st.error("The given file doesn't follow the format.")
