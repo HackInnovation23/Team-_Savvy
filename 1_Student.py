@@ -83,9 +83,10 @@ def fail_fun():
     Material = ["""
     Dear student,
 
-    I wanted to take a moment to acknowledge your efforts and hard work during the recent internal exams. Though the results may not have been what you were hoping for, I want you to know that I'm proud of you for giving your best effort.
+    I wanted to take a moment to acknowledge your efforts and hard work during the recent internal exams. Despite the results not meeting your expectations, I want you believe in you and your potential to do better.
 
-    As your teacher/mentor, I believe in you and your potential to do better. I am confident that with the right support and resources, you will overcome this setback and achieve your goals. In this regard, I would like to share with you some useful websites that offer study materials and resources to help you improve your knowledge and skills:
+    I am confident that with the right support and resources, you will overcome this setback and achieve your goals. In this regard, I would like to share with you some online study materials and resources that can help you improve your knowledge and skills:
+
     Khan Academy: https://www.khanacademy.org/
     Coursera: https://www.coursera.org/
     edX: https://www.edx.org/
@@ -95,20 +96,17 @@ def fail_fun():
     Clutch Prep: https://www.clutchprep.com/
     StudyBlue: https://www.studyblue.com/
     Quizlet: https://quizlet.com/
-    Brightstorm: https://www.brightstorm.com/ 
+    Brightstorm: https://www.brightstorm.com/
     CSE Concepts: https://www.youtube.com/channel/UCfxI-lr-6hG8HkWjNq3COSQ
-
     Mechanical Engineering Concepts: https://www.youtube.com/channel/UCdKP_Y6cU8i-7m6UaekUBjA
-
     EEE Concepts: https://www.youtube.com/channel/UCVpmwo_XHhd4KjQmiSPJi1Q
-
     ECE Concepts: https://www.youtube.com/channel/UC5EHPj04l8a5W-zcZYNRJtA
     """]
 
-    Development = [""" 
+    Development = ["""
     Dear student,
 
-    I wanted to reach out and express my appreciation for your efforts and hard work during the recent internal exams, even though the results may not have been what you were hoping for. As your teacher/mentor, I want you to know that I'm proud of you for your dedication and commitment to your studies.
+    I wanted to reach out and express my appreciation for your efforts and hard work during the recent internal exams, even though the results may not have been what you were hoping for. I want you to know that I'm proud of you for your dedication and commitment to your studies.
 
     While it may be disappointing to not have performed as well as you hoped, I believe that there are valuable lessons to be learned from this experience. With the right support and resources, you can overcome this setback and continue to grow and improve. In this regard, I would like to share with you some useful websites that offer online lectures and resources to help you develop your skills and knowledge:
     NPTEL: https://www.youtube.com/user/nptelhrd
@@ -127,7 +125,7 @@ def fail_fun():
 
     Unacademy Engineering: https://www.youtube.com/channel/UCZKYfN-4f9Gv6A_DDNFwqZw
 
-    ExamFear Education: https://www.youtube.com/user/ExamFearVideos 
+    Overcoming Exam fear: https://www.youtube.com/user/ExamFearVideos 
     Project Gutenberg: https://www.gutenberg.org/
     Google Books: https://books.google.com/
     Free-eBooks.net: https://www.free-ebooks.net/
@@ -228,7 +226,7 @@ if selected == option[0]:
             data = [hos,hoe,iat,attendence]
             res = pipe.predict([data])
             if res:
-                st.success(f"You may pass this examiniation.")
+                st.success(f"You may pass the final semester exams.")
                 send_mail_to_user(email,1)
             else:
                 st.error(f"You may fail try to improve.")
