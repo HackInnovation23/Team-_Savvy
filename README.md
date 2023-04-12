@@ -1,5 +1,15 @@
 # Innovatio-Savvy
 
+## To have a live test:
+
+  link : https://shabari-k-s-innovatio-savvy-1-student-izgb6j.streamlit.app/
+  
+  for Institution Login:
+     **Username**:test
+     **Password**:test
+
+
+
 ## Product Perspective:
  * Our product is a prediction web app that uses machine learning algorithms to predict a student's final semester marks based on their internal marks and other relevant factors.
 
