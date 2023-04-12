@@ -40,24 +40,7 @@ def pass_fun():
     ICT iitr: http://ict.iitr.ac.in/
     ICT iitk: https://www.iitk.ac.in/ict/
     NPTEL: https://nptel.ac.in/"""]
-    placement = ["""
-
-    Dear student,
-
-    I am thrilled to extend my warmest congratulations on your exceptional academic performance. Your hard work, dedication, and commitment to your studies have truly paid off, and you should be proud of your achievements.
-
-    It gives me immense pleasure to share with you some valuable resources that can help you further develop your skills and knowledge to prepare for your future endeavors. Here are some websites that you can explore to enhance your learning and gain valuable skills for your placement:
-
-    Ambitionbox: https://www.ambitionbox.com
-    AceTheInterview: https://www.acetheinterview.com/
-    GeeksforGeeks: https://www.geeksforgeeks.org/
-    LeetCode: https://leetcode.com/
-    Gainlo: http://www.gainlo.co/
-    CareerCup: https://www.careercup.com/
-    CoderCareer: https://www.codercareer.com/
-    InterviewUp: https://www.interviewup.com/
-    InterviewBest: https://www.interviewbest.com/
-    IndiaBIX: https://www.indiabix.com/"""]
+    
     books = ["""
 
     Dear student,
@@ -75,7 +58,7 @@ def pass_fun():
     Scribd: https://www.scribd.com/
     ManyBooks: https://manybooks.net/
     E-Books Directory: https://www.e-booksdirectory.com/ """]
-    l = [skills, placement, books]
+    l = [skills, books]
     i= [0,1,2]
     return random.choice(l[random.choice(i)])
 
@@ -141,7 +124,7 @@ def fail_fun():
     return (random.choice(l[random.choice(i)]))
 
 
-
+    
 
 
 def send_mail_to_user(email,val):
@@ -151,7 +134,26 @@ def send_mail_to_user(email,val):
     if val == 1:
         context = pass_fun()
         sub = "Congratulations! Our Model has predicted that you will pass in all subjects!"
+    elif val == 2:
+        context ="""
+            Dear student,
 
+            I am thrilled to extend my warmest congratulations on your exceptional academic performance. Your hard work, dedication, and commitment to your studies have truly paid off, and you should be proud of your achievements.
+
+            It gives me immense pleasure to share with you some valuable resources that can help you further develop your skills and knowledge to prepare for your future endeavors. Here are some websites that you can explore to enhance your learning and gain valuable skills for your placement:
+
+            Ambitionbox: https://www.ambitionbox.com
+            AceTheInterview: https://www.acetheinterview.com/
+            GeeksforGeeks: https://www.geeksforgeeks.org/
+            LeetCode: https://leetcode.com/
+            Gainlo: http://www.gainlo.co/
+            CareerCup: https://www.careercup.com/
+            CoderCareer: https://www.codercareer.com/
+            InterviewUp: https://www.interviewup.com/
+            InterviewBest: https://www.interviewbest.com/
+            IndiaBIX: https://www.indiabix.com/
+        """
+        sub="Congratulations! Our Model has predicted that you will get placement offer"
     else:
         context = fail_fun()
         sub = "Study Resources"
@@ -202,11 +204,11 @@ if selected == option[0]:
     with c1:
         iat_1 = st.number_input("Enter your IAT-1 marks :",min_value=0,max_value=100)
 
-        hos = st.number_input("Hour's spend for studying : ",min_value=0,max_value=8)
+        hos = st.number_input("Hours spend for studying : ",min_value=0,max_value=8)
     with c3:
         iat_2 = st.number_input("Enter your IAT-2 marks :",min_value=0,max_value=100)
 
-        hoe = st.number_input("Hour's spend for entertainment : ",min_value=0,max_value=8)
+        hoe = st.number_input("Hours spend for entertainment : ",min_value=0,max_value=8)
 
     attendence = st.slider("Your Attendence Precentage : ",min_value=0,max_value=100)
 
@@ -237,6 +239,10 @@ if selected == option[1]:
     pipe_2 = pkl.load(data_2)
 
     st.title("Placement Prediction")
+    
+    st.write("###")
+    
+    st.text_input("Enter your email-id :")
 
     c4,c5,c6 = st.columns([3,1,3])
 
@@ -289,5 +295,6 @@ if selected == option[1]:
 
         if res:
             st.success("You might get placement offer...")
+            send_mail_to_user(email,2)
         else:
             st.error("You may not get placed... Try to improve yourself")
