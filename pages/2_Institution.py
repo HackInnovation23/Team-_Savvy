@@ -133,7 +133,7 @@ if authentication_status == True:
         """
         st.markdown(f"{sty}",unsafe_allow_html=True)
         if name == 'Test':
-            st.subheader("This is an Test login")
+            st.subheader("Test login")
 
         else:
             st.subheader(f"Welcome {name}")
