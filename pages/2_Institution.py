@@ -156,7 +156,7 @@ if authentication_status == True:
         my_bar = st.progress(0, text="Prediction is going on...")
 
         
-        st.subheader("Output")
+        
         try:
             df = pd.read_csv(f)
             y_pred = pipe.predict(df)
@@ -169,6 +169,7 @@ if authentication_status == True:
 
             my_bar.empty()
             df['predicted_value']=df['predicted_value'].map({1:"Pass",0:"Fail"})
+            st.subheader("Output")
             st.table(df)
             @st.cache_data
             def convert_df(df):
