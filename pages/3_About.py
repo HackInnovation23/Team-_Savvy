@@ -26,8 +26,8 @@ if selected == 'Project':
  * The app will be user-friendly and easy to navigate, with clear and concise instructions.\n
 ## Product Features:
 
- * User login and registration\n
  * Student page for entering internal marks and other details\n
+ * Institution login and registration\n
  * Institution page for entering student data and generating results\n
  * Machine learning algorithms for predicting final semester marks\n
  * Consideration of previous academic performance, attendance, and other relevant factors\n
@@ -38,15 +38,14 @@ if selected == 'Project':
 
  * Students: Students will use the app to predict their final semester marks and get an idea of their academic performance.\n
  * Teachers: Teachers will use the app to monitor their students' academic progress and take appropriate measures to improve their performance.\n
- * Institutions: Institutions will use the app to track their students' academic performance and take appropriate measures to improve their overall performance.\n
  * Administrators: Administrators will manage the app and ensure that it is running smoothly.\n
 
-
-
-## Purpose:
- * The purpose of this project is to develop a prediction web app that can accurately predict a student's final semester marks based on their internal marks and other relevant factors. \n
- * The app will help students, teachers, and institutions to get a clear idea of a student's academic performance and take appropriate measures to improve their performance.\n
-        """)
+## Special Features:
+ * Users will also be able to predict whether they will be placed or not.
+ * After submitting the details a mail will be generated from our side about learning resources.
+ * Users can also contribute their data.
+ 
+""")
 
 if selected == 'Team':
     sty = """
@@ -60,11 +59,11 @@ if selected == 'Team':
     st.title("Team Details")
     st.header("Team Description :")
     st.write("""
-         * Welcome to Savvy! We’re an awesome team of visionaries eager to tackle the issue of student mark prediction. 
-         * Our mission is simple: devise a system that accurately predicts grades for students in order to better inform their future decisions of career options. 
-         * In order to do this, our group consists of experts from different fields such as statistics, psychology and neuroscience who will use data analysis techniques combined with creativity to come up with innovative solutions. 
-         * Through collaboration and brainstorming ideas between all members - no matter how big or small they are- we can create something truly magical together! So let us work harmoniously with each other towards bringing forth tangible results – it’s time for Savvy to shine!     
-    """)
+         * Welcome to Savvy! We are a dynamic team of visionary professionals determined to address the challenge of predicting student grades accurately. Our mission is straightforward.
+         * To develop a system that provides students with reliable grade predictions to make informed decisions about their future career options.
+         * Our team comprises experts from diverse fields, who will utilize data analysis techniques and creative approaches to devise innovative solutions. 
+         * We value collaboration and encourage brainstorming of ideas from all team members, regardless of size or scope. Together, we can create something truly extraordinary! Let us work harmoniously towards achieving tangible results. It's time for Savvy to shine!
+""")
 
     st.subheader("Team members : ")
     st.write("""
@@ -73,5 +72,3 @@ if selected == 'Team':
          * [Sathyaram R](https://www.linkedin.com/in/sathyaram-r-592b66227)
          * [Vibav M](https://www.linkedin.com/in/vibav-mahendran-078181228)
     """)
-
-    
