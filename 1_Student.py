@@ -192,7 +192,7 @@ with st.sidebar:
 
 
 if selected == option[0]:
-    st.title("Semester Result Prediction :")
+    st.title("Semester Result Prediction")
     c,c0 = st.columns([2,2])
 
     c1,c2,c3 = st.columns([3,1,3])
