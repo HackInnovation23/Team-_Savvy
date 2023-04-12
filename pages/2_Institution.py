@@ -162,18 +162,21 @@ if authentication_status == True:
         
         my_bar.empty()
         st.subheader("Output")
-        df = pd.read_csv(f)
-        y_pred = pipe.predict(df)
-        df['predicted_value'] = y_pred
-        df['predicted_value']=df['predicted_value'].map({1:"Pass",0:"Fail"})
-        st.table(df)
-        @st.cache_data
-        def convert_df(df):
-            return df.to_csv().encode('utf-8')
-        csv = convert_df(df)
-        st.download_button( 
-            label="Download data as CSV",
-            data=csv,
-            file_name='sample_df.csv',
-            mime='text/csv',
-        )
+        try:
+            df = pd.read_csv(f)
+            y_pred = pipe.predict(df)
+            df['predicted_value'] = y_pred
+            df['predicted_value']=df['predicted_value'].map({1:"Pass",0:"Fail"})
+            st.table(df)
+            @st.cache_data
+            def convert_df(df):
+                return df.to_csv().encode('utf-8')
+            csv = convert_df(df)
+            st.download_button( 
+                label="Download data as CSV",
+                data=csv,
+                file_name='sample_df.csv',
+                mime='text/csv',
+            )
+         except:
+            st.error("The given doesn't follow the format.")
