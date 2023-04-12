@@ -178,5 +178,5 @@ if authentication_status == True:
                 file_name='sample_df.csv',
                 mime='text/csv',
             )
-         except:
+        except:
             st.error("The given doesn't follow the format.")
