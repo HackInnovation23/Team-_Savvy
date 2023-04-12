@@ -21,9 +21,9 @@ with st.sidebar:
 if selected == 'Project':
     st.write("""
 ## Product Perspective:
- * The product is a prediction web app that uses machine learning algorithms to predict a student's final semester marks based on their internal marks and other relevant factors. \n
- * The app will be designed to provide accurate and reliable predictions to students, teachers, and institutions. \n
- * The app will be user-friendly and easy to navigate, with clear and concise instructions.\n
+ * Our product is a prediction web app that uses machine learning algorithms to predict a student's final semester marks based on their internal marks and other relevant factors. \n
+ * It will be designed to provide accurate and reliable predictions to students, teachers, and institutions. \n
+ * It will be user-friendly and easy to navigate, with clear and concise instructions.\n
 ## Product Features:
 
  * Student page for entering internal marks and other details\n
@@ -42,6 +42,7 @@ if selected == 'Project':
 
 ## Special Features:
  * Users will also be able to predict whether they will be placed or not.
+ * Our web app will not only predict the final semester results, it can also be used to predict whether a student will get placed or not.
  * After submitting the details a mail will be generated from our side about learning resources.
  * Users can also contribute their data.
  
