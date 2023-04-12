@@ -179,7 +179,7 @@ pipe = pkl.load(data)
 
 
 
-option = ['Single Subject','Placement Prediction']
+option = ['Semester Result Precdition','Placement Prediction']
 
 
 with st.sidebar:
@@ -190,7 +190,7 @@ with st.sidebar:
 
 
 if selected == option[0]:
-    st.title("Single Subject :")
+    st.title("Semester Result Precdition:")
     c,c0 = st.columns([2,2])
 
     c1,c2,c3 = st.columns([3,1,3])
@@ -226,7 +226,7 @@ if selected == option[0]:
             data = [hos,hoe,iat,attendence]
             res = pipe.predict([data])
             if res:
-                st.success(f"You may pass the final semester exams.")
+                st.success(f"You may pass this examiniation.")
                 send_mail_to_user(email,1)
             else:
                 st.error(f"You may fail try to improve.")
