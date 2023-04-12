@@ -154,6 +154,26 @@ def send_mail_to_user(email,val):
             IndiaBIX: https://www.indiabix.com/
         """
         sub="Congratulations! Our Model has predicted that you will get placement offer"
+    elif val == 3:
+        context = """
+            Dear Student,
+            I wanted to take a moment to acknowledge your efforts and hard work during the recent internal exams. Despite the results not meeting your expectations, I want you believe in you and your potential to do better.
+
+            I am confident that with the right support and resources, you will overcome this setback and achieve your goals. In this regard, I would like to share with you some online study materials and resources that can help you improve your knowledge and skills:
+
+
+            Coursera: https://www.coursera.org/
+            edX: https://www.edx.org/
+            Khan Academy: https://www.khanacademy.org/
+            Udemy: https://www.udemy.com/
+            iTunesU Free Courses: https://www.apple.com/education/itunes-u/
+            MIT OpenCourseWare: https://ocw.mit.edu/index.htm
+            Stanford Online: https://online.stanford.edu/
+            Codecademy: https://www.codecademy.com/
+            ICT iitr: http://ict.iitr.ac.in/
+            ICT iitk: https://www.iitk.ac.in/ict/
+            NPTEL: https://nptel.ac.in/"""
+        sub = " Placement Training Resources"
     else:
         context = fail_fun()
         sub = "Study Resources"
