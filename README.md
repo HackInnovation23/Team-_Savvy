@@ -4,9 +4,9 @@
 
   link : https://shabari-k-s-innovatio-savvy-1-student-izgb6j.streamlit.app/
   
-  for Institution Login:
-     **Username**:test
-     **Password**:test
+  for Institution Login:\n
+     **Username**:test\n
+     **Password**:test\n
 
 
 
