@@ -314,7 +314,7 @@ if selected == option[1]:
         res = pipe_2.predict([[age,gen,stre,intern_c,cgpa,host,hbl]])
 
         if res:
-            st.success("You might get placement offer...")
+            st.success("You have the chance for getting placed...")
             send_mail_to_user(email,2)
         else:
             st.error("You may not get placed... Try to improve yourself")
