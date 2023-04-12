@@ -21,12 +21,14 @@ st.markdown(f"{sty}",unsafe_allow_html=True)
 
 
 def pass_fun():
-    Skill = ["""
-    Dear Students,
+    skills = ["""
 
-    I am thrilled to congratulate  you on your exceptional performance in the internal exams & your performance in your academics . Your hard work, dedication, and commitment to your studies have truly paid off, and you should be proud of your achievements.
+    Dear Student,
 
-    It gives me immense pleasure to share with you some useful resources that can help you further develop your skills and knowledge. Here are some websites that you can explore to enhance your learning and prepare for your future endeavors:
+    I am thrilled to congratulate you on your outstanding academic performance. Your hard work, dedication, and commitment to your studies have truly paid off, and you should be proud of your achievements.
+
+    Please explore the following websites to further develop your skills and knowledge for your future endeavors:
+
     Coursera: https://www.coursera.org/
     edX: https://www.edx.org/
     Khan Academy: https://www.khanacademy.org/
@@ -38,31 +40,32 @@ def pass_fun():
     ICT iitr: http://ict.iitr.ac.in/
     ICT iitk: https://www.iitk.ac.in/ict/
     NPTEL: https://nptel.ac.in/"""]
-
     placement = ["""
+
     Dear student,
 
-    I am thrilled to extend my warmest congratulations on your exceptional performance in the recent internal exams. Your hard work, dedication, and commitment to your studies have truly paid off, and you should be proud of your achievements.
+    I am thrilled to extend my warmest congratulations on your exceptional academic performance. Your hard work, dedication, and commitment to your studies have truly paid off, and you should be proud of your achievements.
 
-    It gives me immense pleasure to share with you some useful resources that can help you further develop your skills and knowledge to prepare for your future endeavors. Here are some websites that you can explore to enhance your learning and gain valuable skills for placement:
+    It gives me immense pleasure to share with you some valuable resources that can help you further develop your skills and knowledge to prepare for your future endeavors. Here are some websites that you can explore to enhance your learning and gain valuable skills for your placement:
+
     Ambitionbox: https://www.ambitionbox.com
-    AceThelnterview: https://www.acetheinterview.com/
-    Geeksforgeeks: https://www.geeksforgeeks.org/
-    Leetcode: https://leetcode.com/
+    AceTheInterview: https://www.acetheinterview.com/
+    GeeksforGeeks: https://www.geeksforgeeks.org/
+    LeetCode: https://leetcode.com/
     Gainlo: http://www.gainlo.co/
-    Careercup: https://www.careercup.com/
-    Codercareer: https://www.codercareer.com/
+    CareerCup: https://www.careercup.com/
+    CoderCareer: https://www.codercareer.com/
     InterviewUp: https://www.interviewup.com/
     InterviewBest: https://www.interviewbest.com/
-    Indiabix: https://www.indiabix.com/"""]
+    IndiaBIX: https://www.indiabix.com/"""]
+    books = ["""
 
-    Books =["""
     Dear student,
 
-    I am delighted to extend my warmest congratulations on your excellent performance in the recent internal exams. Your hard work, dedication, and commitment to your studies have truly paid off, and you should be proud of your achievements.
+    I am thrilled to congratulate you on your outstanding academic performance. Your hard work, dedication, and commitment to your studies have truly paid off, and you should be proud of your achievements.
 
-    As a token of appreciation for your outstanding performance, I would like to share some useful resources with you that can help you further develop your knowledge and skills. Here are some of the best E-book sites that you can explore to gain valuable insights and learn new things:
-    Library Genesis: http://libgen.rs/
+    As a token of appreciation for your outstanding performance, I would like to share some valuable resources with you that can help you further develop your knowledge and skills. Here are some of the best E-book sites that you can explore to gain valuable insights and learn new things:
+
     Project Gutenberg: https://www.gutenberg.org/
     Google Books: https://books.google.com/
     Free-eBooks.net: https://www.free-ebooks.net/
@@ -72,7 +75,7 @@ def pass_fun():
     Scribd: https://www.scribd.com/
     ManyBooks: https://manybooks.net/
     E-Books Directory: https://www.e-booksdirectory.com/ """]
-    l = [Skill, placement, Books]
+    l = [skills, placement, books]
     i= [0,1,2]
     return random.choice(l[random.choice(i)])
 
@@ -125,7 +128,6 @@ def fail_fun():
     Unacademy Engineering: https://www.youtube.com/channel/UCZKYfN-4f9Gv6A_DDNFwqZw
 
     ExamFear Education: https://www.youtube.com/user/ExamFearVideos 
-    Library Genesis: http://libgen.rs/
     Project Gutenberg: https://www.gutenberg.org/
     Google Books: https://books.google.com/
     Free-eBooks.net: https://www.free-ebooks.net/
@@ -209,6 +211,9 @@ if selected == option[0]:
         hoe = st.number_input("Hour's spend for entertainment : ",min_value=0,max_value=8)
 
     attendence = st.slider("Your Attendence Precentage : ",min_value=0,max_value=100)
+
+    if attendence < 75:
+        st.warning("Note : If your attendence is less then 75% your are not eligible")
     
     if email != "" :
         btn = st.button("Submit")
